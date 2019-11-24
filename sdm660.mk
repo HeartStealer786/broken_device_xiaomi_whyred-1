@@ -386,6 +386,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libjson
 
+# Recorder
+PRODUCT_PACKAGES += \
+    OPScreenRecorder
+
 # RCS
 PRODUCT_PACKAGES += \
     rcs_service_aidl \
