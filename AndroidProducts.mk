@@ -14,8 +14,8 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/carbon_tulip.mk
+    $(LOCAL_DIR)/aosp_whyred.mk
 
 COMMON_LUNCH_CHOICES := \
-    carbon_tulip-user \
-    carbon_tulip-userdebug
+    aosp_whyred-user \
+    aosp_whyred-userdebug

@@ -22,9 +22,9 @@
 #
 
 # Inherit proprietary files
-$(call inherit-product, vendor/xiaomi/tulip/tulip-vendor.mk)
+$(call inherit-product, vendor/xiaomi/whyred/whyred-vendor.mk)
 
-DEVICE_PATH := device/xiaomi/tulip
+DEVICE_PATH := device/xiaomi/whyred
 
 # Inherit properties
 $(call inherit-product, $(DEVICE_PATH)/properties.mk)
@@ -32,14 +32,11 @@ $(call inherit-product, $(DEVICE_PATH)/properties.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay \
-    $(DEVICE_PATH)/overlay-carbon
+    $(DEVICE_PATH)/overlay-aosp
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
     $(DEVICE_PATH)/overlay/packages/apps/Snap
-
-PRODUCT_PACKAGES += \
-    NoCutoutOverlay
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \

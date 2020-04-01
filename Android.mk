@@ -16,7 +16,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),tulip)
+ifeq ($(TARGET_DEVICE),whyred)
 
 include $(CLEAR_VARS)
 
@@ -117,6 +117,6 @@ ALL_DEFAULT_INSTALLED_MODULES += $(IMS_SYMLINKS)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
 # Hide overlay
-include device/xiaomi/tulip/overlay/packages/apps/overlays/NoCutoutOverlay/Android.mk
+#include device/xiaomi/tulip/overlay/packages/apps/overlays/NoCutoutOverlay/Android.mk
 
 endif

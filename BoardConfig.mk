@@ -22,7 +22,7 @@
 # definition file).
 #
 
-DEVICE_PATH := device/xiaomi/tulip
+DEVICE_PATH := device/xiaomi/whyred
 
 BOARD_VENDOR := xiaomi
 
@@ -31,7 +31,7 @@ TARGET_SCREEN_HEIGHT := 2160
 TARGET_SCREEN_WIDTH := 1080
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := sdm636
+TARGET_BOOTLOADER_BOARD_NAME := sdm660
 TARGET_NO_BOOTLOADER := true
 
 BUILD_BROKEN_DUP_RULES := true
@@ -46,7 +46,7 @@ TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
-TARGET_CPU_VARIANT := cortex-a73
+TARGET_CPU_VARIANT := kryo
 
 TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv8-a
@@ -57,7 +57,7 @@ TARGET_2ND_CPU_VARIANT := cortex-a73
 TARGET_USES_64_BIT_BINDER := true
 
 # Kernel
-BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 earlycon=msm_serial_dm,0xc170000 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 sched_enable_hmp=1 sched_enable_power_aware=1 service_locator.enable=1 swiotlb=1 androidboot.configfs=true androidboot.usbcontroller=a800000.dwc3
+BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 earlycon=msm_serial_dm,0xc170000 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 sched_enable_hmp=1 sched_enable_power_aware=1 service_locator.enable=1 swiotlb=1 androidboot.configfs=true androidboot.usbcontroller=a800000.dwc3 androidboot.selinux=permissive
 BOARD_KERNEL_CMDLINE += loop.max_part=7
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
@@ -66,8 +66,8 @@ BOARD_RAMDISK_OFFSET     := 0x02000000
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_CONFIG := tulip_defconfig
-TARGET_KERNEL_SOURCE := kernel/xiaomi/tulip
+TARGET_KERNEL_CONFIG := whyred_defconfig
+TARGET_KERNEL_SOURCE := kernel/xiaomi/whyred
 TARGET_KERNEL_CLANG_COMPILE := true
 
 # QCOM hardware
@@ -98,6 +98,10 @@ QCOM_BT_USE_SMD_TTY := true
 
 # Camera
 TARGET_USES_QTI_CAMERA_DEVICE := true
+TARGET_USES_QTI_CAMERA_DEVICE := true
+TARGET_USES_QTI_CAMERA2CLIENT := true
+BOARD_QTI_CAMERA_32BIT_ONLY := true
+TARGET_USES_MEDIA_EXTENSIONS := true
 
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
@@ -111,6 +115,7 @@ TARGET_HW_DISK_ENCRYPTION := true
 
 # Display
 TARGET_USES_HWC2 := true
+TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 TARGET_USES_GRALLOC1 := true
 TARGET_USES_ION := true
 TARGET_USES_NEW_ION_API :=true
@@ -126,7 +131,7 @@ OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 TARGET_ENABLE_MEDIADRM_64 := true
 
 # DT2W
-TARGET_TAP_TO_WAKE_NODE := "/proc/wake_node"
+TARGET_TAP_TO_WAKE_NODE := "/proc/tp_gesture"
 
 # Enable dexpreopt to speed boot time
 ifeq ($(HOST_OS),linux)
@@ -223,4 +228,4 @@ WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit the proprietary files
--include vendor/xiaomi/tulip/BoardConfigVendor.mk
+-include vendor/xiaomi/whyred/BoardConfigVendor.mk
