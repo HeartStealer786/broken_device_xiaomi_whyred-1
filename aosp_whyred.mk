@@ -29,16 +29,16 @@ $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 $(call inherit-product, device/xiaomi/whyred/device.mk)
 
 PRODUCT_BRAND := Xiaomi
-PRODUCT_DEVICE := tulip
+PRODUCT_DEVICE := whyred
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_NAME := aosp_whyred
-PRODUCT_MODEL := Redmi Note 6 Pro
+PRODUCT_MODEL := Redmi Note 5 Pro
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 TARGET_VENDOR_PRODUCT_NAME := whyred
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="tulip-user 9 PKQ1.180904.001 V11.0.2.0.PEKMIXM release-keys"
+    PRIVATE_BUILD_DESC="whyred-user 8.1.0 OPM1.171019.011 V9.5.11.0.OEIMIFA release-keys"
 
-BUILD_FINGERPRINT := xiaomi/tulip/tulip:9/PKQ1.180904.001/V11.0.2.0.PEKMIXM:user/release-keys
+BUILD_FINGERPRINT := xiaomi/whyred/whyred:8.1.0/OPM1.171019.011/V9.5.11.0.OEIMIFA:user/release-keys
