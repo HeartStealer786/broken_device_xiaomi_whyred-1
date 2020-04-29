@@ -114,9 +114,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.isp.clock.optmz=0 \
     persist.vendor.camera.linkpreview=0 \
     persist.vendor.camera.isp.turbo=1 \
-    persist.vendor.camera.exif.make=Xiaomi \
-    persist.vendor.camera.exif.model=Redmi Note 5 \
     persist.vendor.camera.expose.aux=1 \
+    persist.vendor.camera.exif.make=Xiaomi \
+    persist.camera.privapp.list=org.codeaurora.snapcam \
+    persist.vendor.camera.privapp.list=org.codeaurora.snapcam \
+    vendor.camera.aux.packageblacklist=com.google.android.GoogleCamera,com.discord \
     persist.vendor.camera.fdvideo=1 \
     persist.vendor.camera.awb.sync=2 \
     persist.vendor.camera.fdvideo=1 \
@@ -136,9 +138,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
 vendor.camera.hal1.packagelist=com.whatsapp,com.intsig.camscanner,com.instagram.android \
-camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.qualcomm.qti.qmmi
-vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.qualcomm.qti.qmmi,com.longcheertel.cit
-
+vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera
+ 
 
 # Codec2 switch
 PRODUCT_PROPERTY_OVERRIDES += \
