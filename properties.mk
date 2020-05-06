@@ -1,5 +1,5 @@
 #Build FP to be picked by both system and vendor
-BUILD_FINGERPRINT := "google/crosshatch/crosshatch:10/QQ2A.200405.005/6254899:user/release-keys"
+BUILD_FINGERPRINT := "google/crosshatch/crosshatch:10/QQ2A.200501.001.B2/6352890:user/release-keys"
 
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -115,6 +115,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.linkpreview=0 \
     persist.vendor.camera.isp.turbo=1 \
     persist.vendor.camera.expose.aux=1 \
+    persist.vendor.camera.eis.enable=1 \
     persist.vendor.camera.exif.make=Xiaomi \
     persist.camera.privapp.list=org.codeaurora.snapcam \
     persist.vendor.camera.privapp.list=org.codeaurora.snapcam \
