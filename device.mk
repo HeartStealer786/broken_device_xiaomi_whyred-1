@@ -71,7 +71,10 @@ DEVICE_PACKAGE_OVERLAYS += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
-    init.device.rc
+    init.device.rc \
+    init.spectrum.rc \
+    init.spectrum.sh
+
 
 # Sensors
 PRODUCT_COPY_FILES += \

@@ -90,3 +90,6 @@ on post-fs-data
 # Workaround for camera HAL can not read sys property
 on property:sys.camera.face.unlock=*
     setprop vendor.camera.face.unlock ${sys.camera.face.unlock}
+
+# Spectrum
+import init.spectrum.rc
