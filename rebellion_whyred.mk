@@ -19,24 +19,20 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
-# Inherit some common AOSiP stuff
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common Rebellion stuff
+$(call inherit-product, vendor/rebellion/config/common.mk)
 
 # Inherit from whyred device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
-# Inherit some common Evolution X stuff.
-CUSTOM_BUILD_TYPE := OFFICIAL
+# BootAnimation Res
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_GAPPS_ARCH := arm64
-EVO_DONATE_URL := https://paypal.me/joeyhuab
-EVO_MAINTAINER := Zeeshan
-EVO_SUPPORT_URL := https://t.me/evolutionxwhyred 
+
 
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := whyred
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := aosp_whyred
+PRODUCT_NAME := rebellion_whyred
 PRODUCT_MODEL := Redmi Note 5 Pro
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
@@ -46,4 +42,4 @@ TARGET_VENDOR_PRODUCT_NAME := whyred
 PRODUCT_BUILD_PROP_OVERRIDES += \
      PRIVATE_BUILD_DESC="whyred-user 9 PKQ1.180904.001 V11.0.3.0.PEIMIXM release-keys"
 
-BUILD_FINGERPRINT := google/crosshatch/crosshatch:10/QQ2A.200405.005/6254899:user/release-keys
+BUILD_FINGERPRINT := google/crosshatch/crosshatch:10/QQ2A.200501.001.B2/6352890:user/release-keys
