@@ -66,7 +66,7 @@ PRODUCT_PACKAGES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay \
-    $(DEVICE_PATH)/overlay-rebellion
+    $(DEVICE_PATH)/overlay-aosp
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -95,8 +95,10 @@ PRODUCT_PACKAGES += \
 
 
 # XiaomiParts
+ifeq ($(CUSTOM_BUILD_TYPE), OFFICIAL)
 PRODUCT_PACKAGES += \
     XiaomiParts
+endif
 
 # Inherit proprietary files
 $(call inherit-product-if-exists, vendor/xiaomi/whyred/whyred-vendor.mk)
