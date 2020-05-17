@@ -117,7 +117,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.expose.aux=1 \
     persist.vendor.camera.eis.enable=1 \
     persist.vendor.camera.exif.make=Xiaomi \
-    vendor.camera.aux.packageblacklist=com.google.android.GoogleCamera,com.discord \
     persist.vendor.camera.fdvideo=1 \
     persist.vendor.camera.awb.sync=2 \
     persist.vendor.camera.fdvideo=1 \
@@ -137,7 +136,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
 vendor.camera.hal1.packagelist=com.whatsapp,com.intsig.camscanner,com.instagram.android \
-vendor.camera.aux.packagelist=com.android.camera
+vendor.camera.aux.packageblacklist=com.google.android.GoogleCamera,com.discord \
+vendor.camera.aux.packagelist=com.android.camera,com.motorola.faceunlock
  
 
 # Codec2 switch
