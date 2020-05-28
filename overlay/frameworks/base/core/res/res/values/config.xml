@@ -118,4 +118,4 @@
         autodetected from the Configuration. -->
     <bool name="config_showNavigationBar">true</bool>
 
-   
+</resources>   
