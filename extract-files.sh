@@ -70,7 +70,7 @@ function blob_fixup() {
         patchelf --remove-needed vendor.xiaomi.hardware.mtdservice@1.0.so "${2}"
         sed -i "s|/system/etc/firmware|/vendor/firmware\x0\x0\x0\x0|g" "${2}"
         ;;
-    esac
+        esac
 }
 
 # Initialize the common helper
