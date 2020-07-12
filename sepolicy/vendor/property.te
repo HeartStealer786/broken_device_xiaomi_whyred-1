@@ -8,3 +8,7 @@ type camera_ro_prop, property_type;
 type dirac_prop, property_type;
 # PowerHal
 type power_prop, property_type;
+
+# Dolby
+type vendor_dolby_loglevel_prop, property_type;
+

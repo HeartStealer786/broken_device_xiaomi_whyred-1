@@ -109,6 +109,8 @@ PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     audio.a2dp.default \
     libbthost_if \
+    libldacBT_enc \
+    libldacBT_abr \
     libldacBT_dec \
     vendor.qti.hardware.btconfigstore@1.0.vendor
 
@@ -329,6 +331,7 @@ PRODUCT_PACKAGES += \
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
+    $(LOCAL_PATH)/configs/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml \
     $(LOCAL_PATH)/configs/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
     $(LOCAL_PATH)/configs/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
 

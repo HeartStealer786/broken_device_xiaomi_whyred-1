@@ -2,3 +2,7 @@
 allow init sysfs_type:file { setattr };
 allow init hal_perf_default:binder { call };
 allow init vendor_file:file { execute };
+allow init vendor_data_file:file lock;
+allow init hal_audio_default:binder call;
+allow init platform_app:binder call;
+
