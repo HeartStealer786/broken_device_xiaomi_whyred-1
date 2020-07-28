@@ -23,13 +23,13 @@
 
 # Inherit properties
 $(call inherit-product, $(LOCAL_PATH)/properties.mk)
-$(call inherit-product, $(LOCAL_PATH)/product.mk)
+#$(call inherit-product, $(LOCAL_PATH)/product.prop)
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-du
+    $(LOCAL_PATH)/overlay-rr
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
